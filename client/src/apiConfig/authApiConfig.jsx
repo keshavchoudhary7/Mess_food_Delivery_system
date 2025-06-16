@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const Api = axios.create({
-  baseURL: "http://localhost:3000/api/auth",
+  baseURL: import.meta.env.VITE_AUTH_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },

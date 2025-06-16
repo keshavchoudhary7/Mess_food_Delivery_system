@@ -21,8 +21,8 @@ function App() {
 
         {/* Protected Routes (note element={...}) */}
         <Route element={<ProtectedRoute />}>
-          <Route path="/" element={<MenuPage />} />
-          <Route path="/mess-lists" element={<MessLists />} />
+          <Route path="/mess/food-menu" element={<MenuPage />} />
+          <Route path="/" element={<MessLists />} />
         </Route>
       </Routes>
     </>
