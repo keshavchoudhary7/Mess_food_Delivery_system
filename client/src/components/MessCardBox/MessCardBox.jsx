@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const MessCardBox = ({ messName, imageUrl, monthlyPrice }) => {
+  const navigate = useNavigate();
   return (
     <div className="max-w-xs rounded-lg overflow-hidden shadow-lg bg-gray-900 border border-gray-800 hover:shadow-yellow-500/10 hover:border-yellow-500/30 transition-all duration-300">
       {/* Mess Image with Dark Overlay */}
@@ -33,7 +35,10 @@ const MessCardBox = ({ messName, imageUrl, monthlyPrice }) => {
 
         {/* Action Buttons */}
         <div className="flex gap-3">
-          <button className="flex-1 bg-yellow-600 hover:bg-yellow-700 text-gray-900 font-bold py-2 px-4 rounded-lg transition-colors duration-300">
+          <button
+            className="flex-1 bg-yellow-600 hover:bg-yellow-700 text-gray-900 font-bold py-2 px-4 rounded-lg transition-colors duration-300"
+            onClick={() => navigate("/mess/food-menu")}
+          >
             View Details
           </button>
           <button className="flex-1 border border-gray-700 hover:border-yellow-500 text-gray-200 hover:text-yellow-500 py-2 px-4 rounded-lg transition-colors duration-300">
